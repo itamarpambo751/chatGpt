@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Botão com Spinner</title>
+  <style>
+    #btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #spinner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="btn" onclick="handleClick()">
+    Clique em mim
+    <div id="spinner" class="spinner"></div>
+  </button>
+
+  <script>
+    function handleClick() {
+      const button = document.getElementById('btn');
+      const spinner = document.getElementById('spinner');
+
+      // Desativa o botão para evitar cliques adicionais
+      button.disabled = true;
+
+      // Substitui o conteúdo do botão pelo spinner
+      button.innerHTML = '';
+      spinner.style.display = 'block';
+
+      // Simula uma operação assíncrona (pode ser uma requisição AJAX, por exemplo)
+      setTimeout(() => {
+        // Restaura o conteúdo original do botão
+        button.innerHTML = 'Clique em mim';
+        spinner.style.display = 'none';
+        button.disabled = false; // Reativa o botão
+      }, 2000); // Tempo simulado de 2 segundos
+    }
+  </script>
+
+</body>
+</html>
