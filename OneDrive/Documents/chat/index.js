@@ -224,3 +224,22 @@ const categorias = [
         categoria: "Plantas para fins Medicinais",
     }
 ]
+
+
+function removerAcentosEspacos(palavra) {
+    // Remove acentos
+    const palavraSemAcentos = palavra.normalize("NFD").replace(/[\u0300-\u036f]/g, '');
+  
+    // Remove espaços
+    const palavraSemEspacos = palavraSemAcentos.replace(/\s/g, '');
+  
+    return palavraSemEspacos;
+  }
+  
+  // Exemplo de uso
+  const palavraOriginal = 'áéí óú çãõ  espaço';
+  const palavraProcessada = removerAcentosEspacos(palavraOriginal);
+  
+  console.log('Palavra Original:', palavraOriginal);
+  console.log('Palavra Processada:', palavraProcessada);
+  
