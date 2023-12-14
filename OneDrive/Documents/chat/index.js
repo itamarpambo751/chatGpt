@@ -242,4 +242,24 @@ function removerAcentosEspacos(palavra) {
   
   console.log('Palavra Original:', palavraOriginal);
   console.log('Palavra Processada:', palavraProcessada);
-  
+
+  /**
+   * Bengo
+Benguela
+Bié
+Cabinda
+Cuando Cubango
+Cuanza Norte
+Cuanza Sul
+Cunene
+Huambo
+Huíla
+Luanda
+Lunda Norte
+Lunda Sul
+Malanje
+Moxico
+Namibe
+Uíge
+Zaire
+   */
